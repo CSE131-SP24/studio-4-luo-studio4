@@ -1,5 +1,7 @@
 package studio4;
 
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -29,32 +31,56 @@ public class NorwayMotherOfAllFlags {
 	}
 
 	public static void france() {
+
+		//
+		StdDraw.clear();
+		StdDraw.setPenColor(Color.BLUE);
+		StdDraw.filledRectangle(11/3.0, 8, 11/3.0, 8);
+		StdDraw.setPenColor(Color.WHITE);
+		StdDraw.filledRectangle(11, 8, 11/3.0, 8);
+		StdDraw.setPenColor(Color.RED);
+		StdDraw.filledRectangle(55/3.0, 8, 11/3.0, 8);
+
+	}
+	public static void vietnam() {
+		StdDraw.setXscale(0, 30);
+		StdDraw.setYscale(0, 20);
+		StdDraw.setPenColor(218, 37, 29);
+		StdDraw.filledRectangle(15, 10, 15, 10);
+		StdDraw.setPenColor(255, 255, 0);
+		double[] x = {9.29, 15, 20.71, 18.53, 11.47};
+		double[] y = {8.15, 4, 8.15, 14.85, 14.85};
+		StdDraw.filledPolygon(x, y);
 		
-		// TODO
+		
+
+
+
 	}
 
+
 	public static void indonesia() {
-		
+
 		// TODO
 	}
 
 	public static void netherlands() {
-		
+
 		// TODO
 	}
 
 	public static void poland() {
-		
+
 		// TODO
 	}
 
 	public static void thailand() {
-		
+
 		// TODO
 	}
 
 	public static void finland() {
-		
+
 		// TODO
 	}
 
@@ -69,25 +95,29 @@ public class NorwayMotherOfAllFlags {
 				if (DialogBoxes.askUser("Continue to Flag of France?", "Current: Norway", JOptionPane.QUESTION_MESSAGE,
 						options)) {
 					france();
-					if (DialogBoxes.askUser("Continue to Flag of Indonesia?", "Current: France",
+					if (DialogBoxes.askUser("Continue to Flag of Vietnam?", "Current: France",
 							JOptionPane.QUESTION_MESSAGE, options)) {
-						indonesia();
-						if (DialogBoxes.askUser("Continue to Flag of Netherlands?", "Current: Indonesia",
+						vietnam();
+						if (DialogBoxes.askUser("Continue to Flag of Indonesia?", "Current: France",
 								JOptionPane.QUESTION_MESSAGE, options)) {
-							netherlands();
-							if (DialogBoxes.askUser("Continue to Flag of Poland?", "Current: Netherlands",
+							indonesia();
+							if (DialogBoxes.askUser("Continue to Flag of Netherlands?", "Current: Indonesia",
 									JOptionPane.QUESTION_MESSAGE, options)) {
-								poland();
-								if (DialogBoxes.askUser("Continue to Flag of Thailand?", "Current: Poland",
+								netherlands();
+								if (DialogBoxes.askUser("Continue to Flag of Poland?", "Current: Netherlands",
 										JOptionPane.QUESTION_MESSAGE, options)) {
-									thailand();
-									if (DialogBoxes.askUser("Continue to Flag of Finland?", "Current: Thailand",
+									poland();
+									if (DialogBoxes.askUser("Continue to Flag of Thailand?", "Current: Poland",
 											JOptionPane.QUESTION_MESSAGE, options)) {
-										finland();
-										if (DialogBoxes.askUser("Exit?", "Current: Finland")) {
-											// pass
-										} else {
-											continue;
+										thailand();
+										if (DialogBoxes.askUser("Continue to Flag of Finland?", "Current: Thailand",
+												JOptionPane.QUESTION_MESSAGE, options)) {
+											finland();
+											if (DialogBoxes.askUser("Exit?", "Current: Finland")) {
+												// pass
+											} else {
+												continue;
+											}
 										}
 									}
 								}
